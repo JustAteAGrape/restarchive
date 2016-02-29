@@ -3,7 +3,7 @@ import unittest
 
 from mock import patch
 
-import AWeber
+import restarchive
 
 
 class AWeberTestCase(unittest.TestCase):
@@ -14,7 +14,7 @@ class AWeberTestCase(unittest.TestCase):
             os.removedirs('/data/archive/0')
 
     def setUp(self):
-        self.app = AWeber.app.test_client()
+        self.app = restarchive.app.test_client()
         self.cleanUpTestDir()
 
     def tearDown(self):
